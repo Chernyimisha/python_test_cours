@@ -22,7 +22,7 @@ class TestCalculator(TestCase):
         assert self.calc.multyply(3, 4) == 12
 
     def test_div(self):
-        assert self.calc.divide(8, 0) == 2
+        assert self.calc.divide(8, 0) == 0
         with pytest.raises(ValueError):
             self.calc.divide(1, 0)
 

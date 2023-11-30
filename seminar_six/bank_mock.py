@@ -4,13 +4,14 @@
 # аргументом.
 import unittest.mock
 
+
 class Person:
     def __init__(self, balance):
         self.balance = balance
 
     def transfer_money(self, bank, amount):
         if amount <= 0 or amount > self.balance:
-            raise ValueError ("Недостаточно средств")
+            raise ValueError("Недостаточно средств")
         self.balance -= amount
         bank.receive_money(amount)
 

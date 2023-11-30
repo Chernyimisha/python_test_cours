@@ -25,4 +25,4 @@ def test_find_average():
 
 def test_find_average_type():
     with pytest.raises(TypeError):
-        find_average('foo')
+        find_average([15, "5", 1])
